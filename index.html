@@ -533,6 +533,7 @@
             </li>
           </ul>
         </div>
+        <!-- form-footer -->
         <div class="form-field-footer-pos">
           <form class="form-footer">
             <label for="email" class="form-label-footer">Підпишіться на розсилку</label>
@@ -544,14 +545,23 @@
                 id="email"
                 placeholder="E-mail"
               />
-              <button type="submit" class="btn-footer-submit">Підписатися</button>
+              <div class="btn-wrap-footer">
+                <button type="submit" class="btn-footer-submit">
+                  Підписатися
+                  <span
+                    ><svg class="btn-icon-send" width="24" height="24">
+                      <use href="./images/icons.svg#icon-send-1"></use></svg
+                  ></span>
+                </button>
+              </div>
             </div>
           </form>
         </div>
       </div>
     </footer>
-    is-hidden
-    <div class="backdrop" data-modal>
+
+    <!-- is-hidden -->
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-button" data-modal-close>
           <svg class="modal-close-icon" width="11" height="11">
@@ -559,7 +569,7 @@
           </svg>
         </button>
         <p class="title modal-title">Залиште свої дані, ми вам передзвонимо</p>
-
+        <!-- modal -->
         <form class="form-modal">
           <label for="client-name" class="label-modal"><span>Ім'я</span></label>
           <div class="input-wrap">
@@ -608,12 +618,22 @@
           <label for="textarea-comment" class="label-modal"><span>Коментар</span></label>
           <textarea
             id="textarea-comment"
-            name=""
-            id=""
+            name="textarea-comment"
             class="textarea-modal"
             placeholder="Введіть текст"
           ></textarea>
-
+          <!-- modal-checkbox -->
+          <div class="modal-checkbox">
+            <input type="checkbox" name="privacy" id="option" class="input-check visually-hidden" />
+            <label for="option" class="check-text"
+              ><span>
+                <svg class="checked-icon" width="16" height="15">
+                  <use href="./images/icons.svg#icon-check2"></use>
+                </svg>
+              </span>
+              Погоджуюся з розсилкою та приймаю <a href="" class="link">Умови договору</a></label
+            >
+          </div>
           <button type="submit" class="btn-submit">Відправити</button>
         </form>
       </div>
